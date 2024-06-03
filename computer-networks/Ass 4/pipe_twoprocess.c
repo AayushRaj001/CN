@@ -17,10 +17,9 @@ main()
     else
     {
         close(pipefd[1]);
-        printf("PARENT PROCESS RECEIVES DATA\n");
+        printf("\nPARENT PROCESS RECEIVES DATA\n");
         n = read(pipefd[0], buff, sizeof(buff));
-        printf("\nsize of data%d", n);
-printf("\ndata received from child through 
-pipe:%s",buff);
+        printf("\nsize of data: %d", n);
+        printf("\ndata received from child through pipe: %s", buff);
     }
 }

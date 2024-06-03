@@ -9,6 +9,6 @@ main()
     printf("\nwritefd=%d", pipefd[1]);
     write(pipefd[1], "helloworld", 12);
     n = read(pipefd[0], buff, sizeof(buff));
-    printf("\nsize of data%d", n);
+    printf("\nsize of data: %d", n);
     printf("\ndata from pipe:%s", buff);
 }
